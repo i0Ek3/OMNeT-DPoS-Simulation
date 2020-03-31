@@ -30,7 +30,7 @@ simple show
 network Show
 {
     parameters:
-        int nodeNum = 6;
+        int nodeNum = 6; // basic simulation is 15 nodes. 
 
     types:
         channel Channel extends ned.DelayChannel {
@@ -54,7 +54,6 @@ network Show
         for i=3..5 {
         	t[2].gate++ <--> Channel <--> t[i].gate++;
         }
-
      
         for i=4..5 {
         	t[3].gate++ <--> Channel <--> t[i].gate++;
