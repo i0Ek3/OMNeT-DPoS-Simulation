@@ -21,6 +21,8 @@ package show.simulations;
 simple show
 {
 	parameters:
+	    @signal[arrival](type="long");
+	    @statistic[count](title="count"; source="arrival"; record=vector, stats; interpolationmode=none);
 	    @display("i=block/routing");
 
     gates:

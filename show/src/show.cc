@@ -15,6 +15,9 @@ using namespace omnetpp;
 
 class show : public cSimpleModule
 {
+private:
+    simsignal_t arrivalSignal;
+
 protected:
     virtual Show *generateMessage();
     virtual void forwardMessage(Show *msg);
@@ -28,7 +31,8 @@ Define_Module(show);
 
 void show::initialize()
 {
-    if (getIndex() == 0) {
+    arrivalSignal = registerSignal("arrival");
+    if (getIndex()+1) { // all the node synced data at the same time
         Show *msg = generateMessage();
         scheduleAt(0.0, msg);
     }
@@ -49,13 +53,6 @@ void show::handleMessage(cMessage *msg)
     } else {
         forwardMessage(s_msg);
     }
-    /*
-    if (getIndex() == 6) {
-           EV << "Synced!\n";
-           delete msg;
-    } else {
-           forwardMessage(msg);
-    }*/
 }
 
 Show *show::generateMessage() {
@@ -78,3 +75,4 @@ void show::forwardMessage(Show *msg) {
     EV << "Forwarding message " << msg << " on port gate[" << k << "]\n";
     send(msg, "gate$o", k);
 }
+
