@@ -32,6 +32,7 @@ Time limitation, fix later... So, we use Windwos version here.
 
 ## Changelog
 
+- 20.04.01 Synced data at the same time.
 - 20.03.31 Basic data syncing.
 
 
