@@ -25,7 +25,7 @@ Actually, when you complie the OMNeT++ under the macOS/Linux, it's always shown 
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
-Time limitation, fix later... So, we use Windwos version here.
+Time limitation, fix later... So, we use Windows version here.
 
 
 ## Changelog
@@ -36,6 +36,10 @@ Time limitation, fix later... So, we use Windwos version here.
 
 
 ## Snapshots
+
+## 15 nodes pattern
+
+![](https://github.com/i0Ek3/OMNeT-DPoS-Simulation/blob/mac/pic/15nodes-0406.jpg)
 
 ### basic data syncing
 
