@@ -1,14 +1,14 @@
 version 2
-run General-0-20200401-17:38:14-6884
+run General-0-20200406-15:01:42-5916
 attr configname General
-attr datetime 20200401-17:38:14
+attr datetime 20200406-15:01:42
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network Show
-attr processid 6884
+attr processid 5916
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -71,6 +71,105 @@ attr interpolationmode none
 attr source arrival
 attr title "count, stats"
 statistic Show.t[5] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[6] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[7] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[8] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[9] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[10] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[11] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[12] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[13] count:stats
+field count 0
+field mean nan
+field stddev nan
+field min nan
+field max nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source arrival
+attr title "count, stats"
+statistic Show.t[14] count:stats
 field count 0
 field mean nan
 field stddev nan

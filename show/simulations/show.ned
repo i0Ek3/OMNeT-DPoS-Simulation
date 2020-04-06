@@ -32,7 +32,7 @@ simple show
 network Show
 {
     parameters:
-        int nodeNum = 6; // basic simulation is 15 nodes. 
+        int nodeNum = 15; // basic simulation is 15 nodes. 
 
     types:
         channel Channel extends ned.DelayChannel {
@@ -43,24 +43,60 @@ network Show
         t[nodeNum]: show;
 
     connections:
-        // cause of the gate have bi-direction, so we shouldn't use 2->4 and 4->2 every time, we just use 2->4 or 4->2.
+        // cause of the gate have bi-direction, so we shouldn't use 2->4 and 4->2 every time, we just use 2->4 or 4->2 once.
         
-        for i=1..5 {
+        for i=1..14 {
         	t[0].gate++ <--> Channel <--> t[i].gate++;
         }
 
-        for i=2..5 {
+        for i=2..14 {
             t[1].gate++ <--> Channel <--> t[i].gate++;
         }
 
-        for i=3..5 {
+        for i=3..14 {
         	t[2].gate++ <--> Channel <--> t[i].gate++;
         }
      
-        for i=4..5 {
+        for i=4..14 {
         	t[3].gate++ <--> Channel <--> t[i].gate++;
         }
         
-        t[4].gate++ <--> Channel <--> t[5].gate++;
+        for i=5..14 {
+        	t[4].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=6..14 {
+        	t[5].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=7..14 {
+        	t[6].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=8..14 {
+        	t[7].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=9..14 {
+        	t[8].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=10..14 {
+        	t[9].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=11..14 {
+        	t[10].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=12..14 {
+        	t[11].gate++ <--> Channel <--> t[i].gate++;
+        }
+        
+        for i=13..14 {
+        	t[12].gate++ <--> Channel <--> t[i].gate++;
+        }
+
+        t[13].gate++ <--> Channel <--> t[14].gate++;
 
 }
