@@ -17,13 +17,35 @@ package show.simulations;
 
 //
 // TODO auto-generated type
+// 
+// DPoS:
+//		0. join the network
+// 		1. sync data --> all nodes
+// 		2. selection --> n delegated nodes
+// 		3. consensus --> produce and validation block
+// 		4. feedback  --> reward and punishment
+//  	5. next loop --> again
+// 		
 //
+
 simple show
+{
+	parameters:
+	    
+	    @signal[arrival](type="long");
+	    @statistic[count](title="count"; source="arrival"; record=vector, stats; interpolationmode=none);
+	    @display("i=block/routing");
+
+    gates:
+        inout gate[];
+}
+
+simple delegated
 {
 	parameters:
 	    @signal[arrival](type="long");
 	    @statistic[count](title="count"; source="arrival"; record=vector, stats; interpolationmode=none);
-	    @display("i=block/routing");
+	    @display("i=block/computer");
 
     gates:
         inout gate[];
@@ -33,6 +55,7 @@ network Show
 {
     parameters:
         int nodeNum = 15; // basic simulation is 15 nodes, you can change this number which you want, like 51, 101 or more. 
+        int dNum = nodeNum/3;
 
     types:
         channel Channel extends ned.DelayChannel {
@@ -40,7 +63,8 @@ network Show
         }
 
     submodules:
-        t[nodeNum]: show;
+        t[nodeNum]: show; // node number include delegated node.
+        //d[dNum]: delegated; // delegated node.
 
     connections:
         // simplified the code

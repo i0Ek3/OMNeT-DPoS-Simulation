@@ -30,6 +30,7 @@ Time limitation, fix later... So, we use Windows version here.
 
 ## Changelog
 
+- 20.04.07 Test sth., nothing to show.
 - 20.04.06 Change the number of node.
 - 20.04.01 Synced data at the same time.
 - 20.03.31 Basic data syncing.
