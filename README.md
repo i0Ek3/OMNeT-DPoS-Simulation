@@ -3,6 +3,8 @@
 > [WIP] Simulate DPoS consensus on OMNet++.
 > by Lazy guy!
 
+## [Deprecated]
+
 ~~THIS IS MAC VERSION!!! BUT HERE IS NOTHING EXCEPY WINDOWS VERSION, I'LL UPDATE IT IN FREE TIME. SO DON'T RUN THIS SIMULATION NOW!!!~~
 
 !!!Purpose for personally research!!! That means this repo just use for test. If you ref it, YOU OWN RISK!!!
